@@ -1,0 +1,19 @@
+name: Check note index
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  index:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check shell syntax
+        run: bash -n scripts/index.sh
+      - name: Check README index behavior
+        run: python3 -m unittest discover -s tests -v

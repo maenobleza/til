@@ -1,6 +1,8 @@
 # Today I Learned
 
-Short notes on things I learn while running servers and sites. Written for myself; if they help you too, good.
+Short notes on things I learn while working through Linux, Docker and Ansible labs on a test machine. The plan is in [LABS.md](LABS.md); a note is added when a lab is done.
+
+This repository is new. `templates/example-note.md` shows the format and is not one of the notes.
 
 Categories: `linux/` · `docker/` · `cloudflare/` · `networking/` · `ansible/`
 
